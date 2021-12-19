@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <h1>Listado de Personas</h1>
+      <!-- Aplicando property binding -->
+      <button
+        class="btn btn-primary"
+        [disabled]="deshabilitar"
+        (click)="agregarPersona()"
+      >
+        Agregar Persona
+      </button>
+      <p>{{ mensaje }}</p>
+      <app-persona></app-persona>
+      <label for="tituloPersona">Titulo Persona</label>
+      <input
+        type="text"
+        name="Titulo Persona"
+        id="tituloPersona"
+        class="form-control"
+        [(ngModel)]="titulo"
+      />
+      <!-- Aplicando Two way binding -->
+      {{ titulo }}
+    </div>
+  </div>
+</div>
